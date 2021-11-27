@@ -32,7 +32,7 @@
 .card:focus,
 .card:active {
     color: #0070f3;
-    border-color: var(--mainColor);
+    border-color: var(--secondaryColor);
 }
 
 .card h6 {
@@ -47,10 +47,6 @@
     line-height: 1.3;
 }
 
-.card .tech_used {
-    font-size: 10px !important;
-}
-
 .logo {
     height: 1em;
     margin-left: 0.5rem;
@@ -61,4 +57,76 @@
         width: 100%;
         flex-direction: column;
     }
+}
+
+.post_wrapper .post {
+    border: 1px solid var(--borderColor);
+    border-radius: 5px;
+    -webkit-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 7px 21px -9px rgba(0, 0, 0, 0.75);
+}
+
+.post_wrapper .post img {
+    border-radius: 5px 5px 0 0;
+}
+
+.post_wrapper .post .thumbnail {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.post_wrapper .post_preview {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.post_wrapper .post_title {
+    color: black;
+    margin: 0;
+}
+
+.post_wrapper .post_intro {
+    /* color: #4b5156; */
+    font-size: 14px;
+}
+
+.post_wrapper .post .project_veiw {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.post .project_veiw a {
+    padding: 0 0 0 10px;
+}
+
+.post_wrapper .post_tech {
+    color: grey !important;
+    padding: 0 0 0 15px;
+    font-size: 10px;
+}
+
+.view_projects {
+    display: flex;
+    justify-content: center;
+}
+
+.view_projects .more_button {
+    color: var(--secondaryText);
+    background-color: var(--mainColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.8rem 2rem;
+    margin: 40px auto 0px;
+}
+
+.view_projects .more_button:hover {
+    color: var(--mainText);
+    background-color: var(--secondaryColor);
 }
