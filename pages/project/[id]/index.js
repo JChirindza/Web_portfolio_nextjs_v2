@@ -11,14 +11,22 @@ const project = ({project}) => {
                 <div className='main_container'>
                     <Meta title={project.title} description={project.excerpt}/>
                     <h2 className='text_center'>{project.title}</h2>
-                    <img src={project.img_main_path} width='100%' alt="" />
-                    <p>{project.body}</p>
+                    <img src={project.img1_path} width='100%' alt="" />
                     <br />
-                    <div className='row'>
-                        <div className='column_6 text_left'>
+                    <p>{project.description}</p>
+                    <br />
+                    <img src={project.img2_path} width='100%' alt="" />
+                    <br />
+                    <div className='text_center'>
+                        <h4>Tech used:</h4>
+                        <p>{project.tech_used}</p>
+                        <br />
+                    </div>
+                    <div className='row back_next'>
+                        <div className='column_6 text_left back'>
                             <Link href='/'>← Back to home</Link>
                         </div>
-                        <div className='column_6 text_right'>
+                        <div className='column_6 text_right next'>
                             <Link href="/project/[id]" as={`/project/${project.id}`}> Next project  &rarr;</Link>
                         </div>
                         {/* set next id */}

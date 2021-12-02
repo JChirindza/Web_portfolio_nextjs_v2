@@ -404,19 +404,8 @@ h6 {
     width: 100%;
 }
 
-p {
-    color: gray;
-}
-
 .about_me {
     display: grid;
-}
-
-.post_wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 320px);
-    gap: 40px;
-    justify-content: center;
 }
 
 #contact-form {
@@ -644,7 +633,7 @@ p {
     transition: color 0.3s ease;
 }
 
-.header .menu>ul>li .sub-menu {
+.header .menu>ul>li .sub_menu {
     position: absolute;
     z-index: 500;
     background-color: var(--secondaryColor);
@@ -893,7 +882,6 @@ p {
         line-height: 50px;
         text-align: center;
         color: var(--mainText);
-        ;
         font-size: 25px;
     }
     .header .menu .menu_main {
@@ -1049,4 +1037,36 @@ p {
 
 .text_right {
     text-align: right !important;
+}
+
+.back_next {
+    margin-bottom: 20px;
+}
+
+.back_next .next:hover,
+.back_next .back:hover {
+    font-weight: bold;
+}
+
+.view_projects {
+    display: flex;
+    justify-content: center;
+}
+
+.view_projects .more_button {
+    color: var(--secondaryText);
+    background-color: var(--mainColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.8rem 2rem;
+    margin: 40px auto 0px;
+}
+
+.view_projects .more_button:hover {
+    color: var(--mainText);
+    background-color: var(--secondaryColor);
 }

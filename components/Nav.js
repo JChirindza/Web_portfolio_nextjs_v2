@@ -52,10 +52,10 @@ const Nav = () => {
                                         <ul>
                                             <p id="settings-note"> Change theme</p>
                                             <div id="theme-options-wrapper">
-                                                {/* <div data-mode="light" id="light-mode" className={navStyles.theme_dot}></div>
+                                                <div data-mode="light" id="light-mode" className={navStyles.theme_dot}></div>
                                                 <div data-mode="blue" id="blue-mode" className={navStyles.theme_dot}></div>
                                                 <div data-mode="green" id="green-mode" className={navStyles.theme_dot}></div>
-                                                <div data-mode="purple" id="purple-mode" className={navStyles.theme_dot}></div> */}
+                                                <div data-mode="purple" id="purple-mode" className={navStyles.theme_dot}></div>
                                             </div>
                                         </ul>
                                     </div>
