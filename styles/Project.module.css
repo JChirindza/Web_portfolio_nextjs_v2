@@ -29,11 +29,16 @@
     box-shadow: -2px 7px 14px -9px rgba(0, 0, 0, 0.75);
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-    color: #0070f3;
-    border-color: var(--secondaryColor);
+.card:hover {
+    box-shadow: 2px 2px 2px 2px rgba(15, 14, 14, 0.5);
+}
+
+.card:hover .post_title {
+    color: var(--buttonColor);
+}
+
+.card:hover .post_intro {
+    color: var(--secondaryText);
 }
 
 @media (max-width: 600px) {
@@ -43,19 +48,25 @@
     }
 }
 
-.card img:hover,
-.card h6:hover {
+.card img:hover {
     cursor: pointer;
 }
 
 .card .post .post_title {
     margin: 1rem 0;
+}
+
+.card .post .post_title span {
+    border-bottom: 1px dotted rgb(128, 128, 128, 35%);
+    color: var(--mainText);
+    font-family: "Russo One", sans-serif;
     font-weight: bolder;
     letter-spacing: 1px;
 }
 
-.card .post .post_title:hover {
-    color: #17a2b8;
+.card .post .post_title span:hover {
+    color: var(--buttonColor);
+    cursor: pointer;
 }
 
 .card .post_intro {
