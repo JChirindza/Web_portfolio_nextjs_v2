@@ -12,14 +12,17 @@ export default function Repos() {
     const [repositories, setRepositories] = useState([]);
     const [favorites, setFavorites] = useState([]);
 
-    useEffect(async () => {
+    const fetchRepoData = async () => {
         const response = await fetch(
             "https://api.github.com/users/jchirindza/repos"
         );
-
         const data = await response.json();
 
         setRepositories(data);
+    };
+
+    useEffect(() => {
+        fetchRepoData();
     }, []);
 
     return (
