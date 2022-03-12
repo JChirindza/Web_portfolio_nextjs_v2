@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap");
 :root {
-    --mainColor: #15202B;
+    --mainColor: #15202b;
     --secondaryColor: #192734;
-    --borderColor: #164D56;
+    --borderColor: #164d56;
     --mainText: #fff;
-    --secondaryText: #eeeeee;
-    --themeDotBorder: #FFF;
+    --secondaryText: #a5a5a5;
+    --themeDotBorder: #fff;
     --previewBg: rgb(25, 39, 52, 0.8);
     --previewShadow: #111921;
     --buttonColor: #17a2b8;
@@ -46,6 +47,7 @@ body {
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+    font-family: "Roboto Mono", monospace;
 }
 
 body * {
@@ -60,8 +62,9 @@ h5,
 h6,
 strong {
     color: var(--mainText);
-    font-family: 'Russo One', sans-serif;
-    font-weight: 500;
+    font-family: "Russo One", sans-serif;
+    font-weight: bolder;
+    letter-spacing: 3px;
 }
 
 textarea {
@@ -75,12 +78,16 @@ label,
 input,
 textarea {
     color: var(--secondaryText);
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Mono", monospace;
 }
 
 a {
     text-decoration: none;
     color: #17a2b8;
+}
+
+img {
+    width: 100%;
 }
 
 ul {
@@ -165,7 +172,7 @@ h6 {
     box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'nav-wrapper nav-wrapper' 'left-column right-column';
+    grid-template-areas: "nav-wrapper nav-wrapper" "left-column right-column";
 }
 
 .nav_wrapper {
@@ -199,15 +206,15 @@ h6 {
 }
 
 #dot-1 {
-    background-color: #FC6058;
+    background-color: #fc6058;
 }
 
 #dot-2 {
-    background-color: #FEC02F;
+    background-color: #fec02f;
 }
 
 #dot-3 {
-    background-color: #2ACA3E;
+    background-color: #2aca3e;
 }
 
 .browser_dot {
@@ -272,7 +279,7 @@ h6 {
 }
 
 #purple-mode {
-    background-color: #7E4C74;
+    background-color: #7e4c74;
 }
 
 #settings-note {
@@ -319,22 +326,22 @@ h6 {
 
 #corner-tl {
     top: -5px;
-    left: -5px
+    left: -5px;
 }
 
 #corner-tr {
     top: -5px;
-    right: -5px
+    right: -5px;
 }
 
 #corner-br {
     bottom: -5px;
-    right: -5px
+    right: -5px;
 }
 
 #corner-bl {
     bottom: -5px;
-    left: -5px
+    left: -5px;
 }
 
 .fullscreen {
@@ -501,7 +508,7 @@ h6 {
 @media (max-width: 768px) {
     .intro_wrapper {
         grid-template-columns: 1fr;
-        grid-template-areas: 'nav-wrapper' 'left-column' 'right-column';
+        grid-template-areas: "nav-wrapper" "left-column" "right-column";
     }
     .right-column {
         justify-content: center;
@@ -638,7 +645,6 @@ h6 {
     z-index: 500;
     background-color: var(--secondaryColor);
     border: 1px solid var(--borderColor);
-    ;
     box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.2);
     padding: 15px;
     transition: all 0.5s ease;
@@ -647,7 +653,7 @@ h6 {
     visibility: hidden;
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
     .header .menu>ul>li.menu_item_has_children:hover .sub_menu {
         margin-top: 0;
         visibility: visible;
@@ -757,7 +763,7 @@ h6 {
 
 /*responsive*/
 
-@media(max-width: 991px) {
+@media (max-width: 991px) {
     .header .item_center {
         order: 3;
         flex: 0 0 100%;
@@ -787,7 +793,7 @@ h6 {
     }
     .header .mobile_menu_trigger span:before,
     .header .mobile_menu_trigger span:after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         width: 100%;
