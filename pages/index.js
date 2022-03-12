@@ -1,24 +1,56 @@
-import { server } from '../config'
-import ProjectList from '../components/ProjectList'
-import Meta from '../components/Meta'
-import HomePage from './home'
-export default function Home({ projects }) {
-  return (
-    <div>
-      <Meta />
-      <HomePage />
-      <ProjectList projects = {projects} />
-    </div>
-  )
-}
+import Meta from "../components/Meta";
+import HomePage from "./home";
+import matter from "gray-matter";
+import ProjectList from "../components/ProjectList";
+import OtherProjects from "../components/OtherProjects";
+import Contact from "../components/Contact";
+import projectStyles from "../styles/Project.module.css";
 
-export const getStaticProps = async () => {
-  const res = await fetch(`${server}/api/projects`)
-  const projects = await res.json()
+const Index = (props) => {
+    return (
+        <>
+            <Meta />
+            <HomePage />
+            <ProjectList allProjects={props.allProjects} />
+            <OtherProjects allProjects={props.allProjects} />
+            <Contact />
+        </>
+    );
+};
 
-  return {
-    props: {
-      projects,
-    },
-  }
+export default Index;
+
+export async function getStaticProps() {
+    const siteConfig = await import(`../data/config.json`);
+    //get posts & context from folder
+    const posts = ((context) => {
+        const keys = context.keys();
+        const values = keys.map(context);
+
+        const data = keys.map((key, index) => {
+            // Create slug from filename
+            const slug = key
+                .replace(/^.*[\\\/]/, "")
+                .split(".")
+                .slice(0, -1)
+                .join(".");
+            const value = values[index];
+            // Parse yaml metadata & markdownbody in document
+            const document = matter(value.default);
+            return {
+                frontmatter: document.data,
+                markdownBody: document.content,
+                slug,
+            };
+        });
+        return data;
+    })(require.context("../posts", true, /\.md$/));
+
+    return {
+        props: {
+            allProjects: posts,
+            title: siteConfig.default.title,
+            description: siteConfig.default.description,
+        },
+    };
 }
