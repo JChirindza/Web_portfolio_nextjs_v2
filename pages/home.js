@@ -3,7 +3,7 @@ import homeStyles from "../styles/Home.module.css";
 const Home = () => {
     return (
         <>
-            <section className="s1 fullscreen">
+            <section className="s1" id="home">
                 <div className="main_container">
                     <div className="greeting_wrapper">
                         <h1>
@@ -27,7 +27,7 @@ const Home = () => {
                         </div>
 
                         <div className="right_column">
-                            <div id="preview-shadow">
+                            <div id="preview_shadow">
                                 <div id="preview">
                                     <div
                                         id="corner-tl"
@@ -148,6 +148,13 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <style jsx>
+                {`
+                    .s1 #home {
+                    }
+                `}
+            </style>
         </>
     );
 };

@@ -15,7 +15,7 @@ Este pagina web foi criada com a finalidade de divulgar conteudo de um artista S
 
 Neste pagina pode se encontrar conteudos diversos sobre o artista tais Musicas, Videos e muito mais. Podendo escutar as musicas directamente no web site por via de um leitor imbutido no site, em para aceder a mesma musica somente clicar no link da respectiva plataforma de streaming (spotify, soundclound, youtube). Os videos disponibilizados sao visualizados atravez do youtube.
 
-A pagina e' responsiva o que faz com que se adeque a "qualquer" tipo de despositivo.
+A pagina e' responsiva o que faz com que se adeque a "qualquer" tipo de dispositivo.
 
 ##### Releases
 

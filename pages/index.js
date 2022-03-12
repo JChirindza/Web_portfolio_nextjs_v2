@@ -4,7 +4,6 @@ import matter from "gray-matter";
 import ProjectList from "../components/ProjectList";
 import OtherProjects from "../components/OtherProjects";
 import Contact from "../components/Contact";
-import projectStyles from "../styles/Project.module.css";
 
 const Index = (props) => {
     return (
