@@ -1,5 +1,5 @@
 {
-    "name": "next-crash-course2",
+    "name": "Web_portfolio_nextjs_v2",
     "private": true,
     "scripts": {
         "dev": "next dev",
