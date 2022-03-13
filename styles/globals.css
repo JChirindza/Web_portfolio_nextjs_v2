@@ -231,14 +231,24 @@ h6 {
     padding-bottom: 50px;
 }
 
-#profile_pic {
+.avatar {
+    display: flex;
+    justify-content: center;
+}
+
+.avatar #profile_pic {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
     height: 250px;
     width: 250px;
     object-fit: cover;
-    border: 2px solid var(--borderColor);
+    border: 2px solid var(--borderColor) !important;
+}
+
+.avatar img {
+    height: 250px !important;
+    width: 250px !important;
 }
 
 #theme_options_wrapper {

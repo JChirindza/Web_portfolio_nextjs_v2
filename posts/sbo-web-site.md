@@ -3,7 +3,7 @@ title: S.B.O - HipHop Artist Web Site
 author: Joao Chirindza
 date: "2019-07-10T07:00:00.000Z"
 description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-hero_image: "../images/sbo_web_site_home_page.png"
+hero_image: "/../public/images/sbo_web_site_home_page.png"
 tech_used: "Html . CSS . JS . Github Pages"
 ---
 
