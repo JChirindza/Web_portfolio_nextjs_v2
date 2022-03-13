@@ -39,17 +39,10 @@ const ProjectList = ({ allProjects: allProjects }) => {
                                                         projectStyles.project_image
                                                     }
                                                 >
-                                                    {/* <Image
-                                                        src="https://example.com/test"
-                                                        alt="Landscape picture"
-                                                        width={500}
-                                                        height={500}
-                                                    /> */}
-
-                                                    <img
+                                                    <Image
                                                         className="thumbnail"
-                                                        width="100%"
-                                                        height="200px"
+                                                        width="300"
+                                                        height="180"
                                                         src={
                                                             post.frontmatter
                                                                 .hero_image
@@ -118,6 +111,7 @@ const ProjectList = ({ allProjects: allProjects }) => {
                                         >
                                             <a
                                                 data-toggle="tooltip"
+                                                rel="noreferrer"
                                                 title="View More"
                                             >
                                                 <i className="fas fa-eye fa-lg"></i>
@@ -125,6 +119,8 @@ const ProjectList = ({ allProjects: allProjects }) => {
                                             <a
                                                 href="https://github.com/JChirindza"
                                                 data-toggle="tooltip"
+                                                rel="noreferrer"
+                                                target="_blank"
                                                 title="Github Repository"
                                             >
                                                 <i className="fab fa-github fa-lg"></i>

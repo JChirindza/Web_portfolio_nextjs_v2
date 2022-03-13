@@ -18,13 +18,14 @@ const Home = () => {
 
                     <div className="intro_wrapper">
                         <div className="left_column">
-                            <img
-                                id="profile_pic"
-                                width={250}
-                                height={250}
-                                alt="John Chirindza"
-                                src="../images/john.jpg"
-                            />
+                            <div className="avatar">
+                                <Image
+                                    id="profile_pic"
+                                    alt="John Chirindza"
+                                    src={johnImg}
+                                />
+                            </div>
+
                             <h4 className={homeStyles.pic_description}>
                                 I&apos;m a Web Developer
                             </h4>
@@ -147,7 +148,11 @@ const Home = () => {
                                     <label htmlFor="" className="">
                                         Nowadays focusing on PHP + JavaScript:{" "}
                                     </label>
-                                    <a target="_blank" href="resume.pdf">
+                                    <a
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        href="resume.pdf"
+                                    >
                                         Download Resume
                                     </a>
                                 </p>
@@ -156,13 +161,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
-            <style jsx>
-                {`
-                    .s1 #home {
-                    }
-                `}
-            </style>
         </>
     );
 };

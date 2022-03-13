@@ -3,6 +3,7 @@ import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import Meta from "../../components/Meta";
 import Link from "next/dist/client/link";
+import Image from "next/image";
 
 const glob = require("glob");
 
@@ -34,12 +35,12 @@ export default function ProjectTemplate({
                     />
                     <div className="project__info">
                         <h2 className="text_center">{frontmatter.title}</h2>
-                        {/* <h5>{reformatDate(frontmatter.date)}</h5> */}
                     </div>
 
-                    <img
+                    <Image
                         src={frontmatter.hero_image}
-                        width="100%"
+                        width="1600"
+                        height={800}
                         alt={frontmatter.title}
                     />
 
