@@ -40,11 +40,11 @@ export default function ProjectTemplate({
                     <img
                         src={frontmatter.hero_image}
                         width="100%"
-                        alt={`project_hero_${frontmatter.title}`}
+                        alt={frontmatter.title}
                     />
 
                     <div className="project__body">
-                        <ReactMarkdown source={markdownBody} />
+                        <ReactMarkdown>{markdownBody}</ReactMarkdown>
                     </div>
 
                     <div className="project__footer">
@@ -110,11 +110,7 @@ export async function getStaticPaths() {
 
     //remove path and extension to leave filename only
     const projectSlugs = projects.map((file) =>
-        file
-            .split("/")[1]
-            .replace(/ /g, "-")
-            .slice(0, -3)
-            .trim()
+        file.split("/")[1].replace(/ /g, "-").slice(0, -3).trim()
     );
 
     // create paths with `slug` param
