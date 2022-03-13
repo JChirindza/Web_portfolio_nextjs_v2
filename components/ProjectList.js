@@ -1,6 +1,7 @@
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import projectStyles from "../styles/Project.module.css";
+import Image from "next/image";
 
 const ProjectList = ({ allProjects: allProjects }) => {
     function truncateSummary(content) {
@@ -21,19 +22,30 @@ const ProjectList = ({ allProjects: allProjects }) => {
                         <div className={projectStyles.grid}>
                             {allProjects.length >= 1 &&
                                 allProjects.map((post) => (
-                                    <div className={projectStyles.card}>
+                                    <div
+                                        key={post.slug}
+                                        className={projectStyles.card}
+                                    >
                                         <div className={projectStyles.post}>
                                             <Link
                                                 key={post.slug}
                                                 href={{
                                                     pathname: `/project/${post.slug}`,
                                                 }}
+                                                passHref
                                             >
                                                 <div
                                                     className={
                                                         projectStyles.project_image
                                                     }
                                                 >
+                                                    {/* <Image
+                                                        src="https://example.com/test"
+                                                        alt="Landscape picture"
+                                                        width={500}
+                                                        height={500}
+                                                    /> */}
+
                                                     <img
                                                         className="thumbnail"
                                                         width="100%"
@@ -59,6 +71,7 @@ const ProjectList = ({ allProjects: allProjects }) => {
                                                     href={{
                                                         pathname: `/project/${post.slug}`,
                                                     }}
+                                                    passHref
                                                 >
                                                     <h6
                                                         className={

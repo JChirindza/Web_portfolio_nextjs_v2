@@ -44,7 +44,7 @@ export default function Repos() {
                             </thead>
                             <tbody>
                                 {repositories.map((repo) => (
-                                    <tr>
+                                    <tr key={repo.id}>
                                         <td>{repo.language}</td>
                                         <td>
                                             <a
@@ -52,6 +52,7 @@ export default function Repos() {
                                                 href={repo.html_url}
                                                 className="name"
                                                 target="_blank"
+                                                rel="noreferrer"
                                                 title="Github repo"
                                             >
                                                 {repo.name}
