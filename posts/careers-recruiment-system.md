@@ -3,7 +3,7 @@ title: Careers & Recruitment System
 author: "John Chirindza"
 date: "2019-07-10T16:04:44.000Z"
 description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-hero_image: "/../public/images/careers_jobs_filters_page.png"
+hero_image: "/images/careers_jobs_filters_page.png"
 tech_used: "PHP . jQuery . MySQL . Heroku"
 ---
 
