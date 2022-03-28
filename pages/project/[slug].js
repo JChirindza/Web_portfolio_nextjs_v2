@@ -39,7 +39,7 @@ export default function ProjectTemplate({
 
                     <Image
                         src={frontmatter.hero_image}
-                        width="1600"
+                        width={1200}
                         height={800}
                         alt={frontmatter.title}
                     />
