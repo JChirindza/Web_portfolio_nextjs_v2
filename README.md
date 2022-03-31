@@ -1,6 +1,6 @@
 # Personal Web Dev Portfolio
 
-![Web Developer Portfolio](images/portfolio_home_page.png?raw=true "Web Dev Portfolio")
+![Web Developer Portfolio](public/images/portfolio_home_page.png?raw=true "Web Dev Portfolio")
 Website <a href="https://jchirindza.vercel.app" target='_blank'>LIVE DEMO</a>
 
 ##
