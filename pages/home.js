@@ -151,7 +151,7 @@ const Home = () => {
                                     <a
                                         target="_blank"
                                         rel="noreferrer"
-                                        href="resume.pdf"
+                                        href="/resume.pdf"
                                     >
                                         Download Resume
                                     </a>
