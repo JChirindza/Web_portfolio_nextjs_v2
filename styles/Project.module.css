@@ -104,7 +104,22 @@
     color: grey;
 }
 
-.card .view_projects {
-    display: flex;
-    justify-content: center;
+.card .external_links {
+    margin-top: 7px;
+}
+
+.card .external_links .link1 {
+    margin-right: 20px;
+}
+
+.card .external_links a {
+    color: var(--secondaryText);
+}
+
+.card .external_links a:hover {
+    color: var(--buttonColor);
+}
+
+.card .external_links span {
+    display: none;
 }

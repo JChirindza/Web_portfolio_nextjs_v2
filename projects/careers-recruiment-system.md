@@ -5,6 +5,8 @@ date: "2019-07-10T16:04:44.000Z"
 description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 hero_image: "/images/careers_jobs_filters_page.png"
 tech_used: "PHP . jQuery . MySQL . Heroku"
+github_url: "https://github.com/JChirindza"
+web_site_url: "https://github.com/JChirindza"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

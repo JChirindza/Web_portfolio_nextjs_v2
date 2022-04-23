@@ -21,16 +21,16 @@ const ProjectList = ({ allProjects: allProjects }) => {
                     <div>
                         <div className={projectStyles.grid}>
                             {allProjects.length >= 1 &&
-                                allProjects.map((post) => (
+                                allProjects.map((project) => (
                                     <div
-                                        key={post.slug}
+                                        key={project.slug}
                                         className={projectStyles.card}
                                     >
                                         <div className={projectStyles.post}>
                                             <Link
-                                                key={post.slug}
+                                                key={project.slug}
                                                 href={{
-                                                    pathname: `/project/${post.slug}`,
+                                                    pathname: `/project/${project.slug}`,
                                                 }}
                                                 passHref
                                             >
@@ -44,11 +44,11 @@ const ProjectList = ({ allProjects: allProjects }) => {
                                                         width="300"
                                                         height="180"
                                                         src={
-                                                            post.frontmatter
+                                                            project.frontmatter
                                                                 .hero_image
                                                         }
                                                         alt={
-                                                            post.frontmatter
+                                                            project.frontmatter
                                                                 .hero_image
                                                         }
                                                     />
@@ -60,9 +60,9 @@ const ProjectList = ({ allProjects: allProjects }) => {
                                                 }
                                             >
                                                 <Link
-                                                    key={post.slug}
+                                                    key={project.slug}
                                                     href={{
-                                                        pathname: `/project/${post.slug}`,
+                                                        pathname: `/project/${project.slug}`,
                                                     }}
                                                     passHref
                                                 >
@@ -73,7 +73,8 @@ const ProjectList = ({ allProjects: allProjects }) => {
                                                     >
                                                         <span>
                                                             {
-                                                                post.frontmatter
+                                                                project
+                                                                    .frontmatter
                                                                     .title
                                                             }
                                                         </span>
@@ -85,7 +86,7 @@ const ProjectList = ({ allProjects: allProjects }) => {
                                                     }
                                                 >
                                                     {
-                                                        post.frontmatter
+                                                        project.frontmatter
                                                             .description
                                                     }
                                                 </p>
@@ -100,31 +101,55 @@ const ProjectList = ({ allProjects: allProjects }) => {
                                                     projectStyles.tech_used
                                                 }
                                             >
-                                                {post.frontmatter.tech_used}
+                                                {project.frontmatter.tech_used}
                                             </label>
                                         </div>
 
                                         <div
                                             className={
-                                                projectStyles.project_veiw
+                                                projectStyles.external_links
                                             }
                                         >
-                                            <a
-                                                data-toggle="tooltip"
-                                                rel="noreferrer"
-                                                title="View More"
-                                            >
-                                                <i className="fas fa-eye fa-lg"></i>
-                                            </a>
-                                            <a
-                                                href="https://github.com/JChirindza"
-                                                data-toggle="tooltip"
-                                                rel="noreferrer"
-                                                target="_blank"
-                                                title="Github Repository"
-                                            >
-                                                <i className="fab fa-github fa-lg"></i>
-                                            </a>
+                                            {project.frontmatter
+                                                .web_site_url ? (
+                                                <a
+                                                    href={
+                                                        project.frontmatter
+                                                            .web_site_url
+                                                    }
+                                                    data-toggle="tooltip"
+                                                    rel="noreferrer"
+                                                    target="_blank"
+                                                    title="Web site"
+                                                    className={
+                                                        projectStyles.link1
+                                                    }
+                                                >
+                                                    <i className="fas fa-external-link-alt"></i>
+                                                </a>
+                                            ) : (
+                                                <span></span>
+                                            )}
+
+                                            {project.frontmatter.github_url ? (
+                                                <a
+                                                    href={
+                                                        project.frontmatter
+                                                            .github_url
+                                                    }
+                                                    data-toggle="tooltip"
+                                                    rel="noreferrer"
+                                                    target="_blank"
+                                                    title="Github Repository"
+                                                    className={
+                                                        projectStyles.link2
+                                                    }
+                                                >
+                                                    <i className="fab fa-github"></i>
+                                                </a>
+                                            ) : (
+                                                <span></span>
+                                            )}
                                         </div>
                                     </div>
                                 ))}
