@@ -21,8 +21,8 @@ export default Index;
 
 export async function getStaticProps() {
     const siteConfig = await import(`../data/config.json`);
-    //get posts & context from folder
-    const posts = ((context) => {
+    //get projects & context from folder
+    const projects = ((context) => {
         const keys = context.keys();
         const values = keys.map(context);
 
@@ -43,11 +43,11 @@ export async function getStaticProps() {
             };
         });
         return data;
-    })(require.context("../posts", true, /\.md$/));
+    })(require.context("../projects", true, /\.md$/));
 
     return {
         props: {
-            allProjects: posts,
+            allProjects: projects,
             title: siteConfig.default.title,
             description: siteConfig.default.description,
         },

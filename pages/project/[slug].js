@@ -92,7 +92,7 @@ export default function ProjectTemplate({
 
 export async function getStaticProps({ ...ctx }) {
     const { slug } = ctx.params;
-    const content = await import(`../../posts/${slug}.md`);
+    const content = await import(`../../projects/${slug}.md`);
     const config = await import(`../../data/config.json`);
     const data = matter(content.default);
 
@@ -106,8 +106,8 @@ export async function getStaticProps({ ...ctx }) {
 }
 
 export async function getStaticPaths() {
-    //get all .md files in the posts dir
-    const projects = glob.sync("posts/**/*.md");
+    //get all .md files in the projects dir
+    const projects = glob.sync("projects/**/*.md");
 
     //remove path and extension to leave filename only
     const projectSlugs = projects.map((file) =>
