@@ -5,6 +5,8 @@ date: "2019-07-10T07:00:00.000Z"
 description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 hero_image: "/images/ecom_home_page.png"
 tech_used: "JAVA . MySQL . MVC"
+github_url: "https://github.com/JChirindza"
+web_site_url: ""
 ---
 
 ### LOREM IPSUM
