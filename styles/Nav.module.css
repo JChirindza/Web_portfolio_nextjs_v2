@@ -3,7 +3,7 @@
     border-bottom: 1px solid var(--borderColor);
     overflow: inherit;
     position: fixed;
-    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.70) !important;
+    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.7) !important;
 }
 
 .main_container {
@@ -33,7 +33,7 @@
     box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'nav_wrapper nav_wrapper' 'left_column right_column';
+    grid-template-areas: "nav_wrapper nav_wrapper" "left_column right_column";
 }
 
 .row {
@@ -116,7 +116,6 @@
     z-index: 500;
     background-color: var(--secondaryColor);
     border: 1px solid var(--borderColor);
-    ;
     box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.2);
     padding: 15px;
     transition: all 0.5s ease;
@@ -125,7 +124,7 @@
     visibility: hidden;
 }
 
-@media(min-width: 992px) {
+@media (min-width: 992px) {
     .header .menu>ul>li.menu_item_has_children:hover .sub_menu {
         margin-top: 0;
         visibility: visible;
@@ -200,7 +199,7 @@
 
 /*responsive*/
 
-@media(max-width: 991px) {
+@media (max-width: 991px) {
     .header .item_center {
         order: 3;
         flex: 0 0 100%;
@@ -230,7 +229,7 @@
     }
     .header .mobile_menu_trigger span:before,
     .header .mobile_menu_trigger span:after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         width: 100%;
@@ -325,7 +324,6 @@
         line-height: 50px;
         text-align: center;
         color: var(--mainText);
-        ;
         font-size: 25px;
     }
     .header .menu .menu_main {
