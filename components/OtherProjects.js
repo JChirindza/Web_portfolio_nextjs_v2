@@ -29,11 +29,19 @@ export default function Repos() {
         <>
             <section className="s2 some_projects" id="projects">
                 <div className="main_container">
-                    <h3 className="text_center">OTHER PROJECTS</h3>
+                    <h3 className="text_center">
+                        <span className="github_icon">
+                            <i className="fab fa-github"></i>
+                        </span>
+                        OTHER PROJECTS
+                        <span className="github_icon">
+                            <i className="fab fa-github"></i>
+                        </span>
+                    </h3>
                     <div>
                         <table className="tbl_other_projects">
                             <thead>
-                                <th width="5%">Lang</th>
+                                <th width="10%">Lang</th>
                                 <th width="30%" className="name">
                                     <i className="fi-rr-facebook"></i>Name
                                     <i className="fas fa-external-link-alt"></i>
@@ -56,7 +64,7 @@ export default function Repos() {
                                                 title="Github repo"
                                             >
                                                 {repo.name}
-                                                <i className="fas fa-external-link-alt"></i>
+                                                <i className="fab fa-github fa-lg"></i>
                                             </a>
                                         </td>
                                         <td>{repo.description}</td>
@@ -136,6 +144,12 @@ export default function Repos() {
                         padding-right: 5px;
                         color: gold;
                         text-shadow: 0 0 3px #000;
+                    }
+
+                    .some_projects .github_icon {
+                        color: var(--secondaryText);
+                        padding: 0 10px;
+                        font-size: 16px;
                     }
 
                     @media (min-width: 768px) {
