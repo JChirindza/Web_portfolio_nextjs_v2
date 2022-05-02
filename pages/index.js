@@ -11,7 +11,7 @@ const Index = (props) => {
             <Meta />
             <HomePage />
             <ProjectList allProjects={props.allProjects} />
-            <OtherProjects allProjects={props.allProjects} />
+            <OtherProjects />
             <Contact />
         </>
     );
