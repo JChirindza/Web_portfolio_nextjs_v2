@@ -42,6 +42,20 @@
     background: var(--buttonColor);
 }
 
+
+/* Selector to override the default text selection color */
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: #000000;
+    background: #50e3c2;
+}
+
+::selection {
+    color: #000000;
+    background: #50e3c2;
+}
+
 html,
 body {
     padding: 0;
@@ -61,7 +75,7 @@ h4,
 h5,
 h6,
 strong {
-    color: var(--mainText);
+    color: var(--secondaryText);
     font-family: "Russo One", sans-serif;
     font-weight: bolder;
     letter-spacing: 3px;
@@ -123,8 +137,7 @@ h6 {
     background-color: var(--secondaryColor);
     border-bottom: 1px solid var(--borderColor);
     overflow: inherit;
-    position: fixed;
-    box-shadow: 0 0 0.55rem rgb(0 0 0 / 75%);
+    box-shadow: 0 0 0.35rem rgb(0 0 0 / 55%);
 }
 
 .s1 {

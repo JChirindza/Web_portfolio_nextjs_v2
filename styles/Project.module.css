@@ -113,7 +113,7 @@
 }
 
 .card .external_links a {
-    color: var(--secondaryText);
+    color: var(--mainText);
 }
 
 .card .external_links a:hover {
