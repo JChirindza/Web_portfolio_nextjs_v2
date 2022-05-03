@@ -211,15 +211,20 @@ const Nav = () => {
                             </nav>
                         </div>
                         <div className="header-item item-right">
-                            <a href="#">
-                                <i className="fas fa-search"></i>
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="/resume.pdf"
+                                className="more_button"
+                            >
+                                Resume
                             </a>
-                            <a href="#">
+                            {/* <a href="#">
                                 <i className="far fa-heart"></i>
                             </a>
                             <a href="#">
                                 <i className="fas fa-shopping-cart"></i>
-                            </a>
+                            </a> */}
                             <div className="mobile-menu-trigger">
                                 <span></span>
                             </div>
@@ -232,6 +237,18 @@ const Nav = () => {
             <style jsx>
                 {`
                     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+                    .more_button {
+                        color: var(--mainText);
+                        background-color: initial;
+                        border: 1px solid var(--borderColor);
+                        border-radius: 5px;
+                        padding: 8px 14px;
+                    }
+
+                    .more_button:hover {
+                        background-color: var(--previewBg);
+                    }
 
                     body {
                         line-height: 1.5;
