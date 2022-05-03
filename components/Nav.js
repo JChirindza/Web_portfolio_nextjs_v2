@@ -215,16 +215,11 @@ const Nav = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 href="/resume.pdf"
-                                className="more_button"
+                                className="resume-btn"
                             >
                                 Resume
                             </a>
-                            {/* <a href="#">
-                                <i className="far fa-heart"></i>
-                            </a>
-                            <a href="#">
-                                <i className="fas fa-shopping-cart"></i>
-                            </a> */}
+
                             <div className="mobile-menu-trigger">
                                 <span></span>
                             </div>
@@ -238,16 +233,16 @@ const Nav = () => {
                 {`
                     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
-                    .more_button {
+                    .header .resume-btn {
                         color: var(--mainText);
                         background-color: initial;
                         border: 1px solid var(--borderColor);
-                        border-radius: 5px;
-                        padding: 8px 14px;
+                        border-radius: 4px;
+                        padding: 8px 20px;
                     }
 
-                    .more_button:hover {
-                        background-color: var(--previewBg);
+                    .header .resume-btn:hover {
+                        background-color: var(--mainColor);
                     }
 
                     body {
@@ -499,6 +494,11 @@ const Nav = () => {
                         .header {
                             padding: 7px 20px;
                         }
+
+                        .header .resume-btn {
+                            visibility: hidden;
+                        }
+
                         .header .item-center {
                             order: 3;
                             flex: 0 0 100%;
