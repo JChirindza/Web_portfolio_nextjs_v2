@@ -16,7 +16,7 @@ Website <a href="https://jchirindza.vercel.app" target="_blank">LIVE DEMO</a>
 -   Context API (nextjs)
 -   External Rest API : [Github API](https://api.github.com)
 
--   Styled using (styled-jsx).
+-   Styled using `<style jsx>`.
 
 ### Packages used
 
