@@ -1,18 +1,10 @@
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 import projectStyles from "../styles/Project.module.css";
 import Image from "next/image";
 
+const MAX_DISPLAY = 5;
+
 const ProjectList = ({ allProjects: allProjects }) => {
-    function truncateSummary(content) {
-        return content.slice(0, 200).trimEnd();
-    }
-
-    function reformatDate(fullDate) {
-        const date = new Date(fullDate);
-        return date.toDateString().slice(4);
-    }
-
     return (
         <>
             <section className="s1 some_projects" id="projects">
@@ -20,8 +12,9 @@ const ProjectList = ({ allProjects: allProjects }) => {
                     <h3 className="text_center">SOME OF MY PROJECTS</h3>
                     <div>
                         <div className={projectStyles.grid}>
-                            {allProjects.length >= 1 &&
-                                allProjects.map((project) => (
+                            {allProjects
+                                .slice(0, MAX_DISPLAY)
+                                .map((project) => (
                                     <div
                                         key={project.slug}
                                         className={projectStyles.card}
@@ -155,10 +148,15 @@ const ProjectList = ({ allProjects: allProjects }) => {
                                 ))}
                         </div>
                     </div>
-
-                    <div className="view_projects">
-                        <button className="more_button">Show More</button>
-                    </div>
+                    {!allProjects.length ? (
+                        <div className="text_center">
+                            <label>No projects found.</label>
+                        </div>
+                    ) : (
+                        <div className="view_projects">
+                            <button className="more_button">Show all</button>
+                        </div>
+                    )}
                 </div>
             </section>
         </>
