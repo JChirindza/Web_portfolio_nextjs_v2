@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import Meta from "../../components/Meta";
 import Link from "next/dist/client/link";
 import Image from "next/image";
-import markdownStyles from "../../styles/Markdown-styles.module.css";
+import markdownStyles from "../../styles/MarkdownProject.module.css";
 
 const glob = require("glob");
 
