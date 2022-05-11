@@ -566,15 +566,6 @@ h6 {
     text-align: right !important;
 }
 
-.back_next {
-    margin-bottom: 20px;
-}
-
-.back_next .next:hover,
-.back_next .back:hover {
-    font-weight: bold;
-}
-
 .view_projects {
     display: flex;
     justify-content: center;
