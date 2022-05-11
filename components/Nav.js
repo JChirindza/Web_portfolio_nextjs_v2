@@ -123,7 +123,7 @@ const Nav = (props) => {
                                         </li>
                                         <li /*className="menu-item-has-children"*/
                                         >
-                                            <Link href="#projects">
+                                            <Link href="/#projects">
                                                 <a>
                                                     Projects{" "}
                                                     {/* <i className="fa fa-angle-down"></i> */}
