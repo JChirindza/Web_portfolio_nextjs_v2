@@ -1,0 +1,18 @@
+.markdown {
+    max-width: 1000px;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5 {
+    /* color: red; */
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.markdown a:hover {
+    border-bottom: 1.5px solid #06c;
+}
