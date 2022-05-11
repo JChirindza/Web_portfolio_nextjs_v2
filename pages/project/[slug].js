@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import Meta from "../../components/Meta";
 import Link from "next/dist/client/link";
 import Image from "next/image";
+import markdownStyles from "../../styles/Markdown-styles.module.css";
 
 const glob = require("glob");
 
@@ -33,55 +34,95 @@ export default function ProjectTemplate({
                         title={frontmatter.title}
                         description={frontmatter.description}
                     />
-                    <div className="project__info">
-                        <h2 className="text_center">{frontmatter.title}</h2>
+
+                    <div className="project__header">
+                        <div className="project__info">
+                            <h2 className="text_center">{frontmatter.title}</h2>
+                        </div>
+
+                        <Image
+                            src={frontmatter.hero_image}
+                            width={1000}
+                            height={562}
+                            alt={frontmatter.title}
+                        />
+
+                        <div className="description">
+                            <span>{frontmatter.description}</span>
+                        </div>
                     </div>
 
-                    <Image
-                        src={frontmatter.hero_image}
-                        width={1200}
-                        height={800}
-                        alt={frontmatter.title}
-                    />
-
                     <div className="project__body">
-                        <ReactMarkdown>{markdownBody}</ReactMarkdown>
+                        <ReactMarkdown className={markdownStyles["markdown"]}>
+                            {markdownBody}
+                        </ReactMarkdown>
                     </div>
 
                     <div className="project__footer">
-                        <label htmlFor="">Written By:</label>
-                        <span className="author">{frontmatter.author}</span>
-                    </div>
+                        <div className="author">
+                            <label htmlFor="">Written By:</label>
+                            <span>{frontmatter.author}</span>
+                        </div>
 
-                    <div className="row back_next">
-                        <div className="column_6 text_left back">
-                            <Link href="/">← Back to home</Link>
+                        <div className="row next_back_btn">
+                            <div className="column_6 back">
+                                <Link href="/">
+                                    <a>← Back to home</a>
+                                </Link>
+                            </div>
+                            <div className="column_6 next">
+                                <Link
+                                    key={frontmatter.slug}
+                                    href={{
+                                        pathname: `/project/${frontmatter.slug}`,
+                                    }}
+                                >
+                                    <a>Next project &rarr;</a>
+                                </Link>
+                            </div>
+                            {/* set next md project */}
                         </div>
-                        <div className="column_6 text_right next">
-                            {/* <Link
-                                key={post.slug}
-                                href={{
-                                    pathname: `/project/${post.slug}`,
-                                }}
-                            >
-                                Next project &rarr;
-                            </Link> */}
-                        </div>
-                        {/* set next md project */}
                     </div>
                 </div>
 
                 <style jsx>
                     {`
+                        .main_container {
+                            max-width: 1000px;
+                        }
+                        .project__body {
+                            display: flex;
+                            justify-content: center;
+                        }
+                        .project__header .description {
+                            padding: 15px 0;
+                        }
+
+                        .project__body {
+                        }
+
                         .project__footer {
                             margin: 25px 0;
                         }
-                        span {
-                            color: grey;
+
+                        .project__footer .row {
+                            display: -ms-flexbox;
+                            display: flex;
+                            -ms-flex-wrap: wrap;
+                            flex-wrap: wrap;
                         }
 
-                        h3 {
-                            font-weight: bold;
+                        .project__footer .next_back_btn {
+                            margin: 40px 0;
+                        }
+
+                        .project__footer .author span {
+                            padding-left: 15px;
+                        }
+
+                        .project__footer .next {
+                            display: flex;
+                            justify-content: flex-end;
                         }
                     `}
                 </style>
