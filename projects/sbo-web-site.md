@@ -9,41 +9,41 @@ github_url: "https://github.com/JChirindza"
 web_site_url: "https://sbo-music.herokuapp.com"
 ---
 
-[Live Demo](https://sbo-music.herokuapp.com)
+-   [Live Demo 🌐](https://sbo-music.herokuapp.com)
 
 ### ABOUT
 
-Este pagina web foi criada com a finalidade de divulgar conteudo de um artista Sul Africado de nome Sboniso Shange mais conhecido por [S.B.O](https://twitter.com/_S_B_O).
+This website was created for the purpose of promoting content by a South African 🇿🇦 artist named Sboniso Shange better known as [S.B.O](https://twitter.com/_S_B_O).
 
-Neste pagina pode se encontrar conteudos diversos sobre o artista tais Musicas, Videos e muito mais. Podendo escutar as musicas directamente no web site por via de um leitor imbutido no site, em para aceder a mesma musica somente clicar no link da respectiva plataforma de streaming (spotify, soundclound, youtube). Os videos disponibilizados sao visualizados atravez do youtube.
+On this page you will find various contents about the artist such as Songs, Videos and much more. Being able to listen to the songs directly on the site through a player of a streaming platform built into the site, to access the same song, just click on the link of the respective streaming platform (spotify, soundclound, youtube). The available videos are viewed through youtube embedded in the page as well.
 
-A pagina e' responsiva o que faz com que se adeque a "qualquer" tipo de dispositivo.
+The page is responsive, which makes it suitable for "any" type of device.
 
 ##### Releases
 
-Em [RELEASES] estao diposnibilizadas musica do Rapper [S.B.O](https://twitter.com/_S_B_O)
+In [RELEASES](https://sbo-music.herokuapp.com/releases.html) are available the music of Rapper [S.B.O](https://twitter.com/_S_B_O).
 
 ##### Videos
 
-E' possivel visualizar videos no proprio web site acedendo no menu [VIDEOS](https://sbo-music.herokuapp.com/videos.html).
+It is possible to view videos on the website itself by accessing the [VIDEOS](https://sbo-music.herokuapp.com/videos.html) menu item.
 
 ##### Events
 
-Em [EVENTOS](https://sbo-music.herokuapp.com/releases.html) e' possivel visualizar informacoes sobre eventos disponiveis (Data/Hora, Localizacao e Detalhes) assim como visualizar alguns videos de eventos passados.
+In [EVENTS](https://sbo-music.herokuapp.com/releases.html) it is possible to view information about a certain event, such as (Date/Time, Location and Details) as well as view some videos of past events.
 
 ### TECHNOLOGY
 
-Para o desenvolvimento desta pagina foram necessarias as seguintes tecnologias:
+This page was developed using the following technologies:
 
--   HTML / CSS
+-   HTML/CSS
+
+-   Fontawesome
+
 -   Javascript
-
     -   jQuery
         -   Scrollex
         -   Scrolly
 
--   Fontawesome
-
 ### DEPLOY
 
-Esta pagina foi hospedada no Heroku, e pode ser acedida clicando [AQUI](https://sbo-music.herokuapp.com).
+This page was hosted on Heroku and can be accessed by clicking [HERE: Live Demo 🌐](https://sbo-music.herokuapp.com).
