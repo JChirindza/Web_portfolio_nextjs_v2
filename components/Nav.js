@@ -289,8 +289,7 @@ const Nav = (props) => {
                             position: absolute;
                             z-index: 500;
                             background-color: var(--secondaryColor);
-                            box-shadow: -2px 2px 40px -10px rgb(250 250 250 /
-                                        20%);
+                            box-shadow: -2px 2px 40px -10px rgb(0 0 0 / 45%);
                             padding: 20px 30px;
                             transition: all 0.5s ease;
                             margin-top: 25px;
