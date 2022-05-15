@@ -138,21 +138,21 @@ h6 {
     border-bottom: 1px solid var(--borderColor);
     overflow: inherit;
     box-shadow: 0 0 0.35rem rgb(0 0 0 / 55%);
+    top: 0;
 }
 
 .s1 {
     background-color: var(--mainColor);
     border-bottom: 1px solid var(--borderColor);
     overflow: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 60px 0;
 }
 
 .s2 {
     background-color: var(--secondaryColor);
     border-bottom: 1px solid var(--borderColor);
     overflow: auto;
-    padding-top: 50px;
+    padding: 60px 0;
 }
 
 .main_container {
