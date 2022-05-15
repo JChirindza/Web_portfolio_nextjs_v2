@@ -7,12 +7,17 @@
 .markdown h3,
 .markdown h4,
 .markdown h5 {
-    /* color: red; */
     padding-top: 20px;
     padding-bottom: 0;
     margin-bottom: 0;
 }
 
+.markdown a {
+    color: var(--mainText);
+    border-bottom: 1px dotted rgb(128, 128, 128, 35%);
+}
+
 .markdown a:hover {
-    border-bottom: 1.5px solid #06c;
+    color: var(--buttonColor);
+    border-bottom: 1px dotted var(--secondaryText);
 }
