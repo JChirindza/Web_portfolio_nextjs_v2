@@ -60,7 +60,7 @@ export default function ProjectTemplate({
 
                     <div className="project__footer">
                         <div className="author">
-                            <label htmlFor="">Written By:</label>
+                            <label htmlFor="">Developed by:</label>
                             <span>{frontmatter.author}</span>
                         </div>
 

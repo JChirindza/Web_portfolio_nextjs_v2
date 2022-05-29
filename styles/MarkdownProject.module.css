@@ -19,5 +19,5 @@
 
 .markdown a:hover {
     color: var(--buttonColor);
-    border-bottom: 1px dotted var(--secondaryText);
+    border: none;
 }
