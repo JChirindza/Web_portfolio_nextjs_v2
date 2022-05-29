@@ -8,22 +8,53 @@ function reformatDate(fullDate) {
     return date.toDateString().slice(4);
 }
 
-export default function Repos() {
-    const [repositories, setRepositories] = useState([]);
-    const [favorites, setFavorites] = useState([]);
+const MAX_DISPLAY = 5;
+const totalProjects = 0;
 
-    const fetchRepoData = async () => {
+export default function Repos() {
+    // const [repositories, setRepositories] = useState([]);
+
+    // const fetchRepoData = async (start, end) => {
+    //     const response = await fetch(
+    //         "https://api.github.com/users/jchirindza/repos"
+    //     );
+    //     const data = await response.json();
+
+    //     setRepositories(data);
+    // };
+
+    // const showMoreProjects = () => {
+    //     MAX_DISPLAY += 2;
+    //     setRepositories(data.slice(0, MAX_DISPLAY));
+    // };
+
+    // useEffect(() => {
+    //     fetchRepoData(0, MAX_DISPLAY);
+    // }, []);
+
+    /* ******** */
+
+    const [repositories, setRepositories] = useState([]);
+    const [next, setNext] = useState(MAX_DISPLAY);
+
+    const fetchRepoData = async (start, end) => {
         const response = await fetch(
             "https://api.github.com/users/jchirindza/repos"
         );
         const data = await response.json();
-
-        setRepositories(data);
+        totalProjects = data.length;
+        setRepositories(data.slice(0, end));
     };
 
     useEffect(() => {
-        fetchRepoData();
+        fetchRepoData(0, MAX_DISPLAY);
     }, []);
+
+    const showMoreProjects = () => {
+        MAX_DISPLAY += 3;
+        fetchRepoData(next, MAX_DISPLAY);
+        setNext(next + MAX_DISPLAY);
+    };
 
     return (
         <>
@@ -67,7 +98,11 @@ export default function Repos() {
                                                 <i className="fab fa-github fa-lg"></i>
                                             </a>
                                         </td>
-                                        <td>{repo.description}</td>
+                                        <td>
+                                            <label className="description">
+                                                {repo.description}
+                                            </label>
+                                        </td>
                                         <td>{reformatDate(repo.updated_at)}</td>
                                         <td className="stars">
                                             <i className="fas fa-star"></i>
@@ -77,6 +112,23 @@ export default function Repos() {
                                 ))}
                             </tbody>
                         </table>
+                    </div>
+
+                    <div className="view_more_projects">
+                        {totalProjects > MAX_DISPLAY ? (
+                            <div className="load_more_btn">
+                                <button
+                                    onClick={showMoreProjects}
+                                    className="more_button"
+                                >
+                                    Load More
+                                </button>
+                            </div>
+                        ) : (
+                            <label className="no_more_project">
+                                😔 No more projects 😔
+                            </label>
+                        )}
                     </div>
                 </div>
             </section>
@@ -136,6 +188,17 @@ export default function Repos() {
                         display: inline;
                     }
 
+                    td .description {
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                    }
+
+                    td {
+                        height: 50px;
+                    }
+
                     .stars {
                         text-align: center;
                     }
@@ -144,6 +207,28 @@ export default function Repos() {
                         padding-right: 5px;
                         color: gold;
                         text-shadow: 0 0 3px #000;
+                    }
+
+                    .view_more_projects {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    .more_button {
+                        color: var(--secondaryText);
+                        background-color: var(--secondaryColor);
+                        border: 1px solid var(--borderColor);
+                        border-radius: 5px;
+                        font-size: 13px;
+                        line-height: 1;
+                        text-decoration: none;
+                        cursor: pointer;
+                        padding: 0.8rem 2rem;
+                        margin: 40px auto 0px;
+                    }
+
+                    .more_button:hover {
+                        box-shadow: 1px 1px 5px var(--previewShadow);
                     }
 
                     .some_projects .github_icon {
