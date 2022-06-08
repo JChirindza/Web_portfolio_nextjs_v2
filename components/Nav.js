@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useEffect } from "react";
-import NavProjectList from "./NavProjectList";
 
 const Nav = (props) => {
     useEffect(() => {
@@ -713,35 +712,35 @@ const Nav = (props) => {
 
 export default Nav;
 
-export async function getStaticProps() {
-    //get projects & context from folder
+// export async function getStaticProps() {
+//     //get projects & context from folder
 
-    const projects = ((context) => {
-        const keys = context.keys();
-        const values = keys.map(context);
+//     const projects = ((context) => {
+//         const keys = context.keys();
+//         const values = keys.map(context);
 
-        const data = keys.map((key, index) => {
-            // Create slug from filename
-            const slug = key
-                .replace(/^.*[\\\/]/, "")
-                .split(".")
-                .slice(0, -1)
-                .join(".");
-            const value = values[index];
-            // Parse yaml metadata & markdownbody in document
-            const document = matter(value.default);
-            return {
-                frontmatter: document.data,
-                markdownBody: document.content,
-                slug,
-            };
-        });
-        return data;
-    })(require.context("../projects", true, /\.md$/));
+//         const data = keys.map((key, index) => {
+//             // Create slug from filename
+//             const slug = key
+//                 .replace(/^.*[\\\/]/, "")
+//                 .split(".")
+//                 .slice(0, -1)
+//                 .join(".");
+//             const value = values[index];
+//             // Parse yaml metadata & markdownbody in document
+//             const document = matter(value.default);
+//             return {
+//                 frontmatter: document.data,
+//                 markdownBody: document.content,
+//                 slug,
+//             };
+//         });
+//         return data;
+//     })(require.context("../projects", true, /\.md$/));
 
-    return {
-        props: {
-            allProjects: projects,
-        },
-    };
-}
+//     return {
+//         props: {
+//             allProjects: projects,
+//         },
+//     };
+// }

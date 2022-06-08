@@ -1,6 +1,7 @@
 import johnImg from "../public/images/john.jpg";
 import homeStyles from "../styles/Home.module.css";
 import Image from "next/image";
+import siteMetadata from "../data/siteMetaData";
 
 const Home = () => {
     return (
@@ -11,7 +12,7 @@ const Home = () => {
                         <h1>
                             Hi, I&apos;m{" "}
                             <label className={homeStyles.jc_name}>
-                                João Chirindza
+                                {siteMetadata.author}
                             </label>
                         </h1>
                     </div>
