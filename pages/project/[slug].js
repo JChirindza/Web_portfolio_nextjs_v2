@@ -1,23 +1,13 @@
 import * as React from "react";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
-import Meta from "../../components/Meta";
 import Link from "next/dist/client/link";
 import Image from "next/image";
 import markdownStyles from "../../styles/MarkdownProject.module.css";
 
 const glob = require("glob");
 
-export default function ProjectTemplate({
-    frontmatter,
-    markdownBody,
-    siteTitle,
-}) {
-    function reformatDate(fullDate) {
-        const date = new Date(fullDate);
-        return date.toDateString().slice(4);
-    }
-
+export default function ProjectTemplate({ frontmatter, markdownBody }) {
     /*
      ** Odd fix to get build to run
      ** It seems like on first go the props
@@ -30,11 +20,6 @@ export default function ProjectTemplate({
         <>
             <section className="s2">
                 <div className="main_container">
-                    <Meta
-                        title={frontmatter.title}
-                        description={frontmatter.description}
-                    />
-
                     <div className="project__header">
                         <div className="project__info">
                             <h2 className="text_center">{frontmatter.title}</h2>
@@ -134,12 +119,10 @@ export default function ProjectTemplate({
 export async function getStaticProps({ ...ctx }) {
     const { slug } = ctx.params;
     const content = await import(`../../projects/${slug}.md`);
-    const config = await import(`../../data/config.json`);
     const data = matter(content.default);
 
     return {
         props: {
-            siteTitle: config.title,
             frontmatter: data.data,
             markdownBody: data.content,
         },
