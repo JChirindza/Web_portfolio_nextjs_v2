@@ -1,7 +1,7 @@
 const siteMetadata = {
     title: 'João Chirindza Web Portfolio',
     headerTitle: 'Web portfolio',
-    description: 'Personal website to promote my work and show a little about who I am and what I do.',
+    description: 'Personal website to promote my work, show a little about who I am and what I do.',
     author: 'João Chirindza',
     github: 'https://github.com/jchirindza/',
     twitter: 'https://twitter.com/johnchirindza',
