@@ -154,7 +154,9 @@ const ProjectList = ({ allProjects: allProjects }) => {
                         </div>
                     ) : (
                         <div className="view_projects">
-                            <button className="more_button">Show all</button>
+                            <Link href="/project">
+                                <a className="more_button">Show all</a>
+                            </Link>
                         </div>
                     )}
                 </div>
