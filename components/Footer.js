@@ -1,5 +1,5 @@
 import footerStyles from "../styles/Footer.module.css";
-import siteMetadata from "../data/siteMetadata";
+import metaData from "../data/siteMetadata";
 
 const Footer = () => {
     return (
@@ -13,11 +13,11 @@ const Footer = () => {
                         <label>
                             Designed and Built by{" "}
                             <a
-                                href={siteMetadata.twitter}
+                                href={metaData.twitter}
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                {siteMetadata.author}
+                                {metaData.author}
                             </a>
                         </label>
                         <br />
@@ -40,7 +40,7 @@ const Footer = () => {
                         >
                             <li>
                                 <a
-                                    href={siteMetadata.github}
+                                    href={metaData.github}
                                     target="_blank"
                                     title="Github"
                                     rel="noreferrer"
@@ -50,7 +50,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href={siteMetadata.linkedin}
+                                    href={metaData.linkedin}
                                     title="LinkedIn"
                                     target="_blank"
                                     rel="noreferrer"
@@ -60,7 +60,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href={siteMetadata.twitter}
+                                    href={metaData.twitter}
                                     target="_blank"
                                     rel="noreferrer"
                                     title="Facebook"
