@@ -1,5 +1,5 @@
 import footerStyles from "../styles/Footer.module.css";
-import metaData from "../data/siteMetadata";
+import metaData from "../data/siteMetaData";
 
 const Footer = () => {
     return (

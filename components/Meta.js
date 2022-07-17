@@ -1,4 +1,4 @@
-import metaData from "../data/siteMetadata";
+import metaData from "../data/siteMetaData";
 
 const Meta = () => {
     return (
