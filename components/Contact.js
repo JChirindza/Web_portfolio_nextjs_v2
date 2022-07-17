@@ -1,17 +1,6 @@
-import Link from "next/link";
-import ReactMarkdown from "react-markdown";
 import projectStyles from "../styles/Project.module.css";
 
 const ProjectList = ({ allProjects: allProjects }) => {
-    function truncateSummary(content) {
-        return content.slice(0, 200).trimEnd();
-    }
-
-    function reformatDate(fullDate) {
-        const date = new Date(fullDate);
-        return date.toDateString().slice(4);
-    }
-
     return (
         <>
             <section className="s1 some_projects" id="contact">

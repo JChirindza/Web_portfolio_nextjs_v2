@@ -1,7 +1,7 @@
 import footerStyles from "../styles/Footer.module.css";
+import metaData from "../data/siteMetadata";
 
 const Footer = () => {
-    const x = 2;
     return (
         <section
             className={`${footerStyles.s2} ${footerStyles.footer}`}
@@ -13,12 +13,11 @@ const Footer = () => {
                         <label>
                             Designed and Built by{" "}
                             <a
-                                href="https://twitter.com/jchirindza"
+                                href={metaData.twitter}
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                {" "}
-                                João Chirindza
+                                {metaData.author}
                             </a>
                         </label>
                         <br />
@@ -41,7 +40,7 @@ const Footer = () => {
                         >
                             <li>
                                 <a
-                                    href="https://github.com/JChirindza/"
+                                    href={metaData.github}
                                     target="_blank"
                                     title="Github"
                                     rel="noreferrer"
@@ -51,7 +50,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="https://www.linkedin.com/in/john-chirindza-7676085b/"
+                                    href={metaData.linkedin}
                                     title="LinkedIn"
                                     target="_blank"
                                     rel="noreferrer"
@@ -61,12 +60,12 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                    href={metaData.twitter}
                                     target="_blank"
                                     rel="noreferrer"
                                     title="Facebook"
                                 >
-                                    <i className="fab fa-facebook fa-lg"></i>
+                                    <i className="fab fa-twitter fa-lg"></i>
                                 </a>
                             </li>
                         </ul>

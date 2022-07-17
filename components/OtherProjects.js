@@ -1,6 +1,3 @@
-import Link from "next/link";
-import ReactMarkdown from "react-markdown";
-import projectStyles from "../styles/Project.module.css";
 import React, { useState, useEffect } from "react";
 
 function reformatDate(fullDate) {
@@ -12,28 +9,6 @@ const MAX_DISPLAY = 5;
 const totalProjects = 0;
 
 export default function Repos() {
-    // const [repositories, setRepositories] = useState([]);
-
-    // const fetchRepoData = async (start, end) => {
-    //     const response = await fetch(
-    //         "https://api.github.com/users/jchirindza/repos"
-    //     );
-    //     const data = await response.json();
-
-    //     setRepositories(data);
-    // };
-
-    // const showMoreProjects = () => {
-    //     MAX_DISPLAY += 2;
-    //     setRepositories(data.slice(0, MAX_DISPLAY));
-    // };
-
-    // useEffect(() => {
-    //     fetchRepoData(0, MAX_DISPLAY);
-    // }, []);
-
-    /* ******** */
-
     const [repositories, setRepositories] = useState([]);
     const [next, setNext] = useState(MAX_DISPLAY);
 
