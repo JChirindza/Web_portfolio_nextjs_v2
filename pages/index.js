@@ -20,7 +20,6 @@ const Index = (props) => {
 export default Index;
 
 export async function getStaticProps() {
-    const siteConfig = await import(`../data/config.json`);
     //get projects & context from folder
     const projects = ((context) => {
         const keys = context.keys();
@@ -48,8 +47,6 @@ export async function getStaticProps() {
     return {
         props: {
             allProjects: projects,
-            title: siteConfig.default.title,
-            description: siteConfig.default.description,
         },
     };
 }
