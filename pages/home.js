@@ -62,6 +62,15 @@ const Home = () => {
                                         id="corner-bl"
                                         className="corner"
                                     ></div>
+
+                                    <a
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        href="/resume.pdf"
+                                        className="resume-btn"
+                                    >
+                                        Resume
+                                    </a>
                                 </div>
                             </div>
                         </div>
