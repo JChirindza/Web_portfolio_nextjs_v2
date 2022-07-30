@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useEffect } from "react";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Nav = (props) => {
     useEffect(() => {
@@ -160,21 +161,22 @@ const Nav = (props) => {
                                             <a>Contact</a>
                                         </Link>
                                     </li>
+
+                                    <li>
+                                        <span className="theme-item-mobile">
+                                            <ThemeSwitcher></ThemeSwitcher>
+                                        </span>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
                         <div className="header-item item-right">
-                            <a
-                                target="_blank"
-                                rel="noreferrer"
-                                href="/resume.pdf"
-                                className="resume-btn"
-                            >
-                                Resume
-                            </a>
-
                             <div className="mobile-menu-trigger">
                                 <span></span>
+                            </div>
+
+                            <div className="theme-item">
+                                <ThemeSwitcher></ThemeSwitcher>
                             </div>
                         </div>
                     </div>
@@ -185,18 +187,6 @@ const Nav = (props) => {
             <style jsx>
                 {`
                     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
-                    .header .resume-btn {
-                        color: var(--mainText);
-                        background-color: initial;
-                        border: 1px solid var(--borderColor);
-                        border-radius: 4px;
-                        padding: 8px 20px;
-                    }
-
-                    .header .resume-btn:hover {
-                        background-color: var(--mainColor);
-                    }
 
                     body {
                         line-height: 1.5;
@@ -448,10 +438,6 @@ const Nav = (props) => {
                             padding: 7px 20px;
                         }
 
-                        .header .resume-btn {
-                            visibility: hidden;
-                        }
-
                         .header .item-center {
                             order: 3;
                             flex: 0 0 100%;
@@ -698,6 +684,27 @@ const Nav = (props) => {
                         .menu-overlay.active {
                             visibility: visible;
                             opacity: 1;
+                        }
+                    }
+
+                    /* Theme Switchers */
+                    .theme-item-mobile {
+                        display: none;
+                    }
+
+                    /*responsive*/
+                    @media (max-width: 991px) {
+                        .theme-item {
+                            display: none;
+                        }
+                        .theme-item-mobile {
+                            display: block;
+                        }
+
+                        .theme-item-mobile {
+                            display: flex;
+                            justify-content: center;
+                            padding: 40px 0;
                         }
                     }
                 `}
