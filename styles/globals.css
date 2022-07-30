@@ -601,3 +601,17 @@ h6 {
     color: var(--mainText);
     background-color: var(--secondaryColor);
 }
+
+.resume-btn {
+    color: var(--borderColor);
+    background-color: initial;
+    border: 1px solid var(--borderColor);
+    border-radius: 18px;
+    padding: 3px 20px;
+}
+
+.resume-btn:hover {
+    color: var(--buttonColor);
+    border: 1px solid var(--buttonColor);
+    background-color: var(--mainColor);
+}
