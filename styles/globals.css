@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap");
 :root {
+    --mainColor: #eaeaea;
+    --secondaryColor: #fff;
+    --borderColor: #c1c1c1;
+    --mainText: black;
+    --secondaryText: #4b5156;
+    --themeDotBorder: #24292e;
+    --previewBg: rgb(251, 249, 243, 0.8);
+    --previewShadow: #f0ead6;
+    --buttonColor: black;
+}
+
+[data-theme="dark"] {
     --mainColor: #15202b;
     --secondaryColor: #192734;
     --borderColor: #164d56;
