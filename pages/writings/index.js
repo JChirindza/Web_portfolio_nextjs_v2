@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const about = () => {
+const writings = () => {
     return (
         <>
             <section className="s1">
@@ -35,4 +35,4 @@ const about = () => {
     );
 };
 
-export default about;
+export default writings;
