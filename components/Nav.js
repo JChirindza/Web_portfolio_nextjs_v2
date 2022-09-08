@@ -13,6 +13,17 @@ const Nav = (props) => {
             const menuTrigger = document.querySelector(".mobile-menu-trigger");
             const closeMenu = menu.querySelector(".mobile-menu-close");
             let subMenu;
+
+            goBack.addEventListener("click", () => {
+                hideSubMenu();
+            });
+            menuTrigger.addEventListener("click", () => {
+                toggleMenu();
+            });
+            closeMenu.addEventListener("click", () => {
+                toggleMenu();
+            });
+
             menuMain.addEventListener("click", (e) => {
                 if (!menu.classList.contains("active")) {
                     return;
@@ -23,27 +34,32 @@ const Nav = (props) => {
                     );
                     showSubMenu(hasChildren);
                 }
+
+                if (
+                    !e.target.closest(".menu-item-has-children") &&
+                    !e.target.closest(".theme-switch")
+                ) {
+                    toggleMenu();
+                }
+
+                if (e.target.closest("sub-menu")) {
+                    toggleMenu();
+                }
             });
-            goBack.addEventListener("click", () => {
-                hideSubMenu();
-            });
-            menuTrigger.addEventListener("click", () => {
-                toggleMenu();
-            });
-            closeMenu.addEventListener("click", () => {
-                toggleMenu();
-            });
+
             document
                 .querySelector(".menu-overlay")
                 .addEventListener("click", () => {
                     toggleMenu();
                 });
+
             function toggleMenu() {
                 menu.classList.toggle("active");
                 document
                     .querySelector(".menu-overlay")
                     .classList.toggle("active");
             }
+
             function showSubMenu(hasChildren) {
                 subMenu = hasChildren.querySelector(".sub-menu");
                 subMenu.classList.add("active");
@@ -143,12 +159,12 @@ const Nav = (props) => {
                                         </a>
                                         <div className="sub-menu single-column-menu">
                                             <ul>
-                                                <li>
+                                                <li className="sub-menu-item">
                                                     <Link href="/writings">
                                                         <a>Writtings</a>
                                                     </Link>
                                                 </li>
-                                                <li>
+                                                <li className="sub-menu-item">
                                                     <Link href="/timeline">
                                                         <a>Timeline</a>
                                                     </Link>
@@ -162,7 +178,7 @@ const Nav = (props) => {
                                         </Link>
                                     </li>
 
-                                    <li>
+                                    <li className="theme-switch">
                                         <span className="theme-item-mobile">
                                             <ThemeSwitcher></ThemeSwitcher>
                                         </span>
